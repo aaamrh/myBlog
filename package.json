@@ -122,5 +122,6 @@
     "sass-loader": "^7.1.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
-  }
+  },
+  "proxy": "http://localhost:9093"
 }

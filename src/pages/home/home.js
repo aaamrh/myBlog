@@ -4,7 +4,7 @@ import './home.scss'
 import Beta from '../../components/Beta/Beta'
 import Main from '../../components/Main/Main'
 import Nav from '../../components/Nav/Nav'
-
+import Tools from '../../components/Tools/Tools'
 
 
 class Home extends React.Component{
@@ -15,6 +15,7 @@ class Home extends React.Component{
         <div className='m-alpha'>
           <Nav></Nav>
           <Main></Main>
+          <Tools></Tools>
         </div>
       </div>
     )

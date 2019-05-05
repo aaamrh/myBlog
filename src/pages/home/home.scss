@@ -5,11 +5,22 @@ html, body{
   min-height: 100%;
   background: $colorE;
 }
+
 ::selection{
   background: $colorF;
   color: $colorA;
 }
 .m-alpha{
   margin-left: 350px;
-  outline: 1px solid $colorB;
+  // outline: 1px solid $colorB;
+}
+
+
+@media screen and (max-width:900px) {
+  .m-beta{
+    display: none
+  }
+  .m-alpha{
+    margin-left: 0;
+  }
 }

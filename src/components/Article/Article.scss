@@ -1,0 +1,17 @@
+@import '../../style/default.scss';
+
+.article{
+  width: 70%;
+  height: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: $box-shadow;
+  background: #fff;
+
+  .date{
+    font-size: 12px;
+  }
+  .title{
+    font-size:  38px;
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../style/default.scss';
+
+.tools{
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  background: $colorF;
+  cursor: pointer;
+
+  .wechat{
+    width: 45px;
+    height: 45px;
+    background: url(../../images/wechat-icon.png) no-repeat center/80%;
+  }
+}
