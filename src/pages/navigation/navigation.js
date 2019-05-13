@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../style/func.scss'
 import './navigation.scss'
 
+
 class Navigation extends Component {
   render() {
     return (
