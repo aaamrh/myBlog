@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import './Nav.scss'
 
 class Nav extends Component {
@@ -6,6 +7,7 @@ class Nav extends Component {
     return (
       <div className="m-headnav">
         this is head nav
+        <Link to='/navigation'>前端导航</Link>
       </div>
     );
   }
