@@ -18,6 +18,7 @@ class Beta extends Component {
           <p>
             <a href='#'>关于我</a>
           </p>
+          <p>京ICP备19001238号-1</p>
         </footer>
       </div>
     );

@@ -26,6 +26,7 @@
     "eslint-plugin-react": "7.12.4",
     "express": "^4.16.4",
     "file-loader": "2.0.0",
+    "forever": "^1.0.0",
     "fs-extra": "7.0.1",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
@@ -57,7 +58,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "forever": "./node_modules/forever/bin/forever"
   },
   "eslintConfig": {
     "extends": "react-app"
