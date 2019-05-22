@@ -3,5 +3,28 @@
 .m-headnav{
   background: $colorA;
   margin-bottom: 10px;
+  padding-left: 20px;
   box-shadow: $box-shadow;
+  height: 50px;
+  line-height: 50px;
+
+  .nav{
+    display: inline-block;
+    margin-right: 35px;
+
+    letter-spacing:5px ;
+    font-size: 14px;
+    color: $colorB;
+    transition: .2s ease-in-out;
+
+    &:hover{
+      font-size: 16px;
+      color:#999;
+    }
+  }
+
+  .active{
+    font-size: 16px;
+    color:#999;
+  }
 }

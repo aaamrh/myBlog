@@ -2,16 +2,53 @@
 
 .article{
   width: 70%;
-  height: 200px;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 10px;
   box-shadow: $box-shadow;
   background: #fff;
 
-  .date{
+  border-radius: 5px;
+
+  &-date{
     font-size: 12px;
+    color: $colorC;
   }
-  .title{
-    font-size:  38px;
+  &-title{
+    font-size:  25px;
+    margin: 10px 0;
+  }
+  .breaf-content{
+    line-height: 2;
+    font-size: 14px;
+  }
+  &-data{
+    position: relative;
+    .click{
+      font-size: 12px;
+      color: $colorC;
+    }
+    .read{
+      display: block;
+      position: absolute;
+      right: 0px;
+      bottom: -5px;
+
+      width: 80px;
+      height: 30px;
+
+      line-height: 30px;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+
+      background: $colorF;
+      border-radius: 5px;
+      transition: all .3s;
+      -webkit-transition: all .3s;
+
+      &:hover{
+        background: $colorJ;
+      }
+    }
   }
 }

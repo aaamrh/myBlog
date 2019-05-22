@@ -5,17 +5,11 @@ import Article from '../Article/Article.js'
 
 class Main extends Component {
   render() {
-    const num = 10;
     return (
       <div className='m-main'>
         <div className="articles">
-          <Article value='123'></Article>
-          <Article value='456'></Article>
-          <Article value='456'></Article>
-          <Article value='456'></Article>
-          <Article value='456'></Article>
-          <Article value='456'></Article>
-          <Article value='456'></Article>
+          <Article value='纯CSS实现吸顶效果' date='2015-10-22'></Article>
+          <Article value='转载--雅虎35条优化黄金守则' date='2018-01-19'></Article>
         </div>
       </div>
     );

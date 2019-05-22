@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './Beta.scss'
+import './Beta.scss';
+
+import avator from '../../images/avator.jpg';
 
 class Beta extends Component {
   componentDidMount(){
@@ -10,15 +12,15 @@ class Beta extends Component {
     return (
       <div className='m-beta'>
         <header>
-          <img alt='头像' />
-          <h3>马三岁</h3>
-          <p>不懂的知识就努力去补充，这才是成长之道！</p>
+          <img className='avator' src={avator} alt='头像' />
+          <h3 className='name'>马三岁</h3>
+          <p className='motto'>不懂的知识就努力去补充，这才是成长之道！</p>
         </header>
         <footer className='footer'>
           <p>
-            <a href='#'>关于我</a>
+            <a href='#' className='about-me'>关于我</a>
           </p>
-          <p>京ICP备19001238号-1</p>
+          <p>京ICP备19001238号</p>
         </footer>
       </div>
     );
