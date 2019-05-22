@@ -6,10 +6,10 @@ import Beta from '../../components/Beta/Beta'
 import Main from '../../components/Main/Main'
 import Nav from '../../components/Nav/Nav'
 import Tools from '../../components/Tools/Tools'
-
+import '../../public'
 
 class Home extends React.Component{
-
+  
   render(){
     return (
       <div>
