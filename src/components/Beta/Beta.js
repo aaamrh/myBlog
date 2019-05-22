@@ -13,7 +13,7 @@ class Beta extends Component {
       <div className='m-beta'>
         <header>
           <img className='avator' src={avator} alt='头像' />
-          <h3 className='name'>马三岁</h3>
+          <h3 className='name'>铁头马</h3>
           <p className='motto'>不懂的知识就努力去补充，这才是成长之道！</p>
         </header>
         <footer className='footer'>

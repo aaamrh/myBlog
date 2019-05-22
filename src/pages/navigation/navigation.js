@@ -94,6 +94,7 @@ class Navigation extends Component {
             <ul className='navs'>
               <li className='nav'><a rel="noopener noreferrer" target="_blank" href="http://es6.ruanyifeng.com/">ES6</a></li>
               <li className='nav'><a rel="noopener noreferrer" target="_blank" href="https://www.tslang.cn/docs/home.html">TypeScript</a></li>
+              <li className='nav'><a rel="noopener noreferrer" target="_blank" href="https://reacttraining.com/react-router/">React Router</a></li>
             </ul>
           </div>
 
