@@ -18,5 +18,10 @@ export function article(state=initState, action){
 
 
 export function publish({type, title,  date, breaf_content, content}){
-  console.log(type)
+  console.log(type, title,  date, breaf_content, content)
+
+  return dispatch=>{
+    axios.post('', {})
+      .then(res=>{console.log(res)})
+  }
 }
