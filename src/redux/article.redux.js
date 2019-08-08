@@ -21,7 +21,7 @@ export function publish({type, title,  date, breaf_content, content}){
   console.log(type, title,  date, breaf_content, content)
 
   return dispatch=>{
-    axios.post('', {})
+    axios.post('/article/publish/', {})
       .then(res=>{console.log(res)})
   }
 }

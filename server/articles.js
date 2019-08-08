@@ -13,4 +13,10 @@ Router.get('/',  function(req, res){
   })
 })
 
+
+Router.post('/publish/', function(req, res){
+  console.log(req.url)
+  console.log(req.query)
+})
+
 module.exports = Router
