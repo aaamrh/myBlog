@@ -8,6 +8,8 @@
   font-size: 14px;
   padding-top: 10px;
   background: url(../../images/nav-bg.jpg) 0 0/100%;
+  overflow: hidden;
+  
   .nav-notice{
     @include center-bgwhite;
     padding: 10px;

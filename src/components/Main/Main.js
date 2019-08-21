@@ -14,7 +14,7 @@ class Main extends Component {
         <div className="articles">
           {
             articles ? articles.map((item, index) => {
-              return <Article content={item.content} title={item.title} date={item.date}></Article>
+              return <Article content={item.content} title={item.title} date={item.date} key={index}></Article>
                 // return <div key={index}>{item}</div>
             }) : null
           }
