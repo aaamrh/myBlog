@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const DB_URL='mongodb://localhost:27017/marh-blog';
+const DB_URL='mongodb://localhost:27017/maBlog';
 
 
 mongoose.connect(DB_URL)
@@ -10,10 +10,11 @@ const models = {
   article:{
     'title': {type:String, require:true},
     'content': {type: String, require: true},
-    'date': {type: Date, require: true},
-    'breaf-intro' : {type:String, require: true},
-    'type':{type: String, require: true},
-    'click-num': {type: Number, require:false}
+    'html':{type: String, require: true},
+    'type':{type: Array, require: true},
+    'breaf-intro' : {type:String}, 
+    'date': {type: String},
+    'click-num': {type: Number}
   }
 }
    

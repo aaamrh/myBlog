@@ -49,6 +49,7 @@ class PublishArticle extends Component {
   }
 
   handleChange(ev){
+    console.log(1)
     this.setState({
       [ev.target.name]:ev.target.value
     })
@@ -57,6 +58,7 @@ class PublishArticle extends Component {
   handleSubmit(ev){
     console.log(this.props)
     console.log(this.state)
+
     this.props.publish(this.state)
   }
 
@@ -64,7 +66,7 @@ class PublishArticle extends Component {
   componentDidMount () {
     this.isLivinig = true
     // 3秒后更改编辑器内容
-    setTimeout(this.setEditorContentAsync, 3000)
+    setTimeout(this.setEditorContentAsync, 1000)
   }
 
   componentWillUnmount () {
@@ -72,7 +74,16 @@ class PublishArticle extends Component {
   }
 
   handleEditor = (editorState) => {
+    let text, html;
+    html = editorState.toHTML();
+
+    text = html.replace(/(\<[a-z]+\>)|(\<\/[a-z]+\>)/g, function($0, $1, $2){
+      if($2 === '</p>'){  return '\n' }
+      return '';
+    })
+
     this.setState({
+      content: text,
       editorState: editorState,
       outputHTML: editorState.toHTML()
     })
@@ -133,8 +144,6 @@ class PublishArticle extends Component {
 
           <input type='button' value='提交' onClick={this.handleSubmit} />
         </form>
-        
-       
 
       </div>
     );

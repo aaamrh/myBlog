@@ -5,9 +5,9 @@ const articleRouter = require('./articles');
 
 
 const app = express();
-app.use('/article', articleRouter);
 app.use(bodyParser.json())
 app.use(cookieParser())
+app.use('/article', articleRouter);
 app.listen(9093, function(req, res){ 
   console.log('Node app start at port 9093')
 })
