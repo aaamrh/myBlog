@@ -11,7 +11,7 @@ const models = {
     'title': {type:String, require:true},
     'content': {type: String, require: true},
     'html':{type: String, require: true},
-    'type':{type: Array, require: true},
+    'tag':{type: Array, require: true},
     'breaf-intro' : {type:String}, 
     'date': {type: String},
     'click-num': {type: Number}

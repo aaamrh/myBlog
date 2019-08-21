@@ -6,7 +6,6 @@ import 'braft-editor/dist/index.css'
 import '../../style/func.scss' 
 import './Options.scss'
 
-
 import { publish } from '../../redux/article.redux'
 
 @connect(
@@ -17,7 +16,7 @@ class PublishArticle extends Component {
   constructor(props){
     super(props)
     this.state={
-      type:[],
+      tag:[],
       title:'',
       date:'',
       breaf_content:'',
@@ -32,24 +31,23 @@ class PublishArticle extends Component {
   }
 
   handleCheckBox(ev){
-    let types = this.state.type;
-    let type = ev.target.value;
+    let tags = this.state.tag;
+    let tag = ev.target.value;
 
-    if(types.indexOf(type) === -1){
-      types.push(type)
+    if(tags.indexOf(tag) === -1){
+      tags.push(tag)
       this.setState({
-        type : types
+        tag : tags
       })
     }else{
-      types.splice( types.indexOf(type), 1 )
+      tags.splice( tags.indexOf(tag), 1 )
       this.setState({
-        type : types
+        tag : tags
       })
     }
   }
 
   handleChange(ev){
-    console.log(1)
     this.setState({
       [ev.target.name]:ev.target.value
     })
@@ -77,11 +75,11 @@ class PublishArticle extends Component {
     let text, html;
     html = editorState.toHTML();
 
-    text = html.replace(/(\<[a-z]+\>)|(\<\/[a-z]+\>)/g, function($0, $1, $2){
+    text = html.replace(/(<[\w][^>]*>)|(<\/[\w]+>)/g, function($0, $1, $2){
       if($2 === '</p>'){  return '\n' }
       return '';
     })
-
+    
     this.setState({
       content: text,
       editorState: editorState,
@@ -123,11 +121,11 @@ class PublishArticle extends Component {
           <div className='f-clearfix'>
             <label className='label f-fl'>标签：</label>
             <div className='f-fl f-clearfix'>
-              <label className='f-fl'>React: <input type='checkbox' name='type'  onChange={this.handleCheckBox} value='React' /></label> 
-              <label className='f-fl'>Python: <input type='checkbox' name='type'  onChange={this.handleCheckBox} value='Python' /></label> 
-              <label className='f-fl'>Flask: <input type='checkbox' name='type'  onChange={this.handleCheckBox} value='Flask' /></label> 
-              <label className='f-fl'>Vue: <input type='checkbox' name='type'  onChange={this.handleCheckBox} value='Vue' /></label> 
-              <label className='f-fl'>html/css: <input type='checkbox' name='type'  onChange={this.handleCheckBox} value='html/css' /></label> 
+              <label className='f-fl'>React: <input type='checkbox' name='tag'  onChange={this.handleCheckBox} value='React' /></label> 
+              <label className='f-fl'>Python: <input type='checkbox' name='tag'  onChange={this.handleCheckBox} value='Python' /></label> 
+              <label className='f-fl'>Flask: <input type='checkbox' name='tag'  onChange={this.handleCheckBox} value='Flask' /></label> 
+              <label className='f-fl'>Vue: <input type='checkbox' name='tag'  onChange={this.handleCheckBox} value='Vue' /></label> 
+              <label className='f-fl'>Js: <input type='checkbox' name='tag'  onChange={this.handleCheckBox} value='js' /></label> 
             </div>
           </div>
 
