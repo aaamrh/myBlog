@@ -7,7 +7,7 @@ class Nav extends Component {
   render() {
     return (
       <div className="m-headnav">
-        <Link className='nav active' to='/navigation'>最新</Link>
+        <Link className='nav active' to='/'>最新</Link>
         <Link className='nav del' to='#'>前端笔记</Link>
         <Link className='nav del' to='#'>后端笔记</Link>
         <Link className='nav del' to='#'>移动笔记</Link>
