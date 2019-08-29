@@ -31,7 +31,7 @@ class Home extends React.Component{
           <Nav></Nav>
           <Switch>
             <Route path='/' exact={true} component={Main} ></Route>
-            <Route path='/a' component={ArticleInfo} ></Route>
+            <Route path='/a/:articleId' component={ArticleInfo} ></Route>
           </Switch>
           {/* <Main articles={this.state.articles}></Main> */}
           <Tools></Tools>

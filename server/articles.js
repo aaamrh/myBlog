@@ -19,8 +19,15 @@ Router.get('/',  function(req, res){
 })
 
 
-Router.get('/a', function(req, res){
-  console.log('aaaaaaaaaaaaaa')
+Router.get('/article_content/', function(req, res){
+  console.log(req.query)
+  const {id} = req.query
+  console.log(id)
+  Article.findOne({_id:id}, function(err, doc){
+    if(doc){
+      console.log(doc)
+    }
+  })
   return ''
 }) 
 
