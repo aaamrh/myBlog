@@ -20,7 +20,7 @@ export function article(state=initState, action){
 }
 
 
-// action creater
+/**** Action Creater ****/ 
 function publishSuccess(data){
   return {type: PUBLISH_SUCCESS,  payload: data}
 }
@@ -28,6 +28,10 @@ function publishSuccess(data){
 export function getArticles(){
 
 }
+
+/**** Action End ****/
+
+
 
 
 export function publish({tag, title, content, outputHTML}){
@@ -43,6 +47,12 @@ export function publish({tag, title, content, outputHTML}){
         dispatch(publishSuccess(res.data.data))
       })
   }
+}
+
+
+export function readArticle({}){
+  console.log('%c阅读文章', 'color:green;')
+  return dispatch =>{}
 }
 
 
@@ -67,5 +77,4 @@ function getDate(){
   second = second<10 ? '0'+second : second;
 
   return year +'/' + month + '/' + day + ' ' + hour + ':' + minute + ':' + second;
-
 }

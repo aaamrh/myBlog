@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 import './Main.scss' 
 
 import Article from '../Article/Article.js'
@@ -6,21 +7,28 @@ import Article from '../Article/Article.js'
 class Main extends Component {
   constructor(props){
     super(props)
+    this.state = {
+      articles: null
+    }
+  }
+  componentWillMount(){
+    axios.get('/article/')
+    .then(res=>{  
+      this.setState({
+        articles: res.data.articles
+      })
+    })
   }
   render() {
-    const articles = this.props.articles;
+    const articles = this.state.articles;
     return (
       <div className='m-main'>
         <div className="articles">
           {
             articles ? articles.map((item, index) => {
-              return <Article content={item.content} title={item.title} date={item.date} key={index}></Article>
-                // return <div key={index}>{item}</div>
+              return <Article article={item} key={index}></Article>
             }) : null
           }
-
-          {/* <Article value='纯CSS实现吸顶效果' date='2015-10-22'></Article> */}
-          {/* <Article value='转载--雅虎35条优化黄金守则' date='2018-01-19'></Article> */}
         </div>
       </div>
     );

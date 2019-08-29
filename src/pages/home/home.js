@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import {Route, Router, Switch, withRouter} from 'react-router-dom'
 import '../../style/reset.css'
 import './home.scss'
 
@@ -7,6 +8,9 @@ import Beta from '../../components/Beta/Beta'
 import Main from '../../components/Main/Main'
 import Nav from '../../components/Nav/Nav'
 import Tools from '../../components/Tools/Tools'
+import ArticleInfo from '../../components/ArticleInfo/ArticleInfo';
+
+
 import '../../public'
 
 class Home extends React.Component{
@@ -17,13 +21,7 @@ class Home extends React.Component{
     }
   }
   componentDidMount(){
-    axios.get('/article/')
-      .then(res=>{  
-        console.log(res)
-        this.setState({
-          articles: res.data.articles
-        })
-      })
+  
   }
   render(){
     return (
@@ -31,7 +29,11 @@ class Home extends React.Component{
         <Beta></Beta>
         <div className='m-alpha'>
           <Nav></Nav>
-          <Main articles={this.state.articles}></Main>
+          <Switch>
+            <Route path='/' exact={true} component={Main} ></Route>
+            <Route path='/a' component={ArticleInfo} ></Route>
+          </Switch>
+          {/* <Main articles={this.state.articles}></Main> */}
           <Tools></Tools>
         </div>
       </div>
@@ -40,4 +42,4 @@ class Home extends React.Component{
 }
 
 
-export default Home;
+export default withRouter(Home);

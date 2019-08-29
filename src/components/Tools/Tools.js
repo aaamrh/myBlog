@@ -6,6 +6,7 @@ class Tools extends Component {
     return (
       <div className="tools">
         <div className="wechat"></div>
+        
       </div>
     );
   }

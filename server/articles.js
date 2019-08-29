@@ -6,12 +6,23 @@ const Article = model.getModel('article')
 
 Router.get('/',  function(req, res){
   // Article.create({'title':'测试测试','click-num':'ni'}, function(err, doc){
-      console.log('err')
+      // console.log('err')
   // })
+  console.log('/')
   Article.find({}, function(err, doc){
+    if(err){
+      console.log('---- / err  ----')
+      console.log(err)
+    }
     return res.json({articles:doc})  
   })
 })
+
+
+Router.get('/a', function(req, res){
+  console.log('aaaaaaaaaaaaaa')
+  return ''
+}) 
 
 
 Router.post('/publish/', function(req, res){
