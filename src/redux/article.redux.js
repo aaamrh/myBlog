@@ -45,6 +45,7 @@ export function publish({tag, title, content, outputHTML}){
       .then(res=>{
         console.log(res)
         dispatch(publishSuccess(res.data.data))
+        // TODO: 提示发布成功
       })
   }
 }
