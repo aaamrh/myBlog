@@ -30,8 +30,8 @@ class Home extends React.Component{
         <div className='m-alpha'>
           <Nav></Nav>
           <Switch>
-            <Route path='/' exact={true} component={Main} ></Route>
-            <Route path='/a/:articleId' component={ArticleInfo} ></Route>
+            <Route path='/home/' exact={true} component={Main} ></Route>
+            <Route path='/home/a/:articleId' component={ArticleInfo} ></Route>
           </Switch>
           {/* <Main articles={this.state.articles}></Main> */}
           <Tools></Tools>

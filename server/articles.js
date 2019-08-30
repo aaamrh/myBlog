@@ -3,6 +3,7 @@ const Router = express.Router()
 const model = require('./model')
 const Article = model.getModel('article')
 
+const _filter = {'pwd':false, '__v':false}
 
 Router.get('/',  function(req, res){
   // Article.create({'title':'测试测试','click-num':'ni'}, function(err, doc){
@@ -23,12 +24,13 @@ Router.get('/article_content/', function(req, res){
   console.log(req.query)
   const {id} = req.query
   console.log(id)
-  Article.findOne({_id:id}, function(err, doc){
-    if(doc){
-      console.log(doc)
+  Article.findOne({_id:id}, _filter, function(err, doc){
+    if(err){
+      console.log(err)
+      return res.json({err: err})
     }
+    return res.json({data: doc})
   })
-  return ''
 }) 
 
 

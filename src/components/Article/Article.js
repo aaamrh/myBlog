@@ -18,7 +18,7 @@ class Article extends Component {
         
         <div className='article-data'>
           <span className='click'>阅读量 328 </span>
-          <Link className='read' to={`/a/${article._id}`} target="_blank" >阅读全文</Link>
+          <Link className='read' to={`/home/a/${article._id}`} target="_blank" >阅读全文</Link>
           {/* <Link className='read' to={{
             pathname: "/a/:id",
             search: `id=${article._id}`,

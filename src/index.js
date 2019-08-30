@@ -10,6 +10,7 @@ import Navigation from './pages/navigation/navigation.js';
 import Admin from './pages/admin/admin.js';
 
 import reducer from './reducer'
+import ToHome from './components/ToHome/ToHome';
 
 // ReactDOM.render(<Home />, document.getElementById('root'));
 
@@ -24,8 +25,8 @@ ReactDOM.render(
       <BrowserRouter> 
         <div>
           <Switch>
-            {/* <Route exact path="/home" component={Home}></Route>  */}
-            <Route path="/" component={Home}></Route> 
+            <Route exact path="/" component={ToHome}></Route> 
+            <Route path="/home" component={Home}></Route> 
             <Route path="/navigation" component={Navigation}></Route> 
             <Route path="/admin" component={Admin}></Route> 
           </Switch>
