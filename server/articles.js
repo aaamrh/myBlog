@@ -38,9 +38,9 @@ Router.post('/publish/', function(req, res){
   // console.log(req.url)
   // console.log(req.query)  // 解析GET中的参数
   // console.log(req.body)
-  console.log('-------------------')
+  console.log('--------/publish/-----------')
   const { tag, title, content, date, outputHTML } = req.body;
-
+  console.log(req.body);
   const articleModel = new Article({tag, title, content, date, html:outputHTML});
 
   articleModel.save(function(err,doc){
