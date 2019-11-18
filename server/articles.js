@@ -5,11 +5,11 @@ const Article = model.getModel('article')
 
 const _filter = {'pwd':false, '__v':false}
 
-Router.get('/article_list',  function(req, res){
+Router.get('/article_list/',  function(req, res){
   // Article.create({'title':'测试测试','click-num':'ni'}, function(err, doc){
       // console.log('err')
   // })
-  console.log('/')
+  console.log('/article_list/')
   Article.find({}, function(err, doc){
     if(err){
       console.log('---- / err  ----')
