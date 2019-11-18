@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 app.use(cookieParser())
 app.use('/article', articleRouter);
-app.listen(9093, function(req, res){ 
+app.listen(9093, '0.0.0.0', function(req, res){ 
   console.log('Node app start at port 9093')
 }) 
 
