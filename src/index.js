@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Redirect, Switch, HashRouter} from 'react-router-dom';
 import {createStore, applyMiddleware, compose} from 'redux'
 import {Provider} from 'react-redux'
 import thunk from 'redux-thunk'
@@ -22,7 +22,7 @@ const store = createStore(reducer, compose(
 ReactDOM.render(
   (
     <Provider store = {store}>
-      <BrowserRouter> 
+      <HashRouter> 
         <div>
           <Switch>
             <Route exact path="/" component={ToHome}></Route> 
@@ -31,7 +31,7 @@ ReactDOM.render(
             <Route path="/admin" component={Admin}></Route> 
           </Switch>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
     
   ), 
