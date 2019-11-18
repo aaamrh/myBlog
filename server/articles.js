@@ -5,7 +5,7 @@ const Article = model.getModel('article')
 
 const _filter = {'pwd':false, '__v':false}
 
-Router.get('/',  function(req, res){
+Router.get('/article_list',  function(req, res){
   // Article.create({'title':'测试测试','click-num':'ni'}, function(err, doc){
       // console.log('err')
   // })

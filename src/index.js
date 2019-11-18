@@ -22,7 +22,7 @@ const store = createStore(reducer, compose(
 ReactDOM.render(
   (
     <Provider store = {store}>
-      <HashRouter> 
+      <BrowserRouter> 
         <div>
           <Switch>
             <Route exact path="/" component={ToHome}></Route> 
@@ -31,7 +31,7 @@ ReactDOM.render(
             <Route path="/admin" component={Admin}></Route> 
           </Switch>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </Provider>
     
   ), 

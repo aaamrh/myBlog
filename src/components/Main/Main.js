@@ -12,7 +12,7 @@ class Main extends Component {
     }
   }
   componentWillMount(){
-    axios.get('/article/')
+    axios.get('/article/article_list/')
     .then(res=>{  
       this.setState({
         articles: res.data.articles
