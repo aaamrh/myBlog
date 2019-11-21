@@ -28,7 +28,7 @@ ReactDOM.render(
             <Route exact path="/" component={ToHome}></Route> 
             <Route path="/home" component={Home}></Route> 
             <Route path="/navigation" component={Navigation}></Route> 
-            <Route path="/admin" component={Admin}></Route> 
+            <Route path="/aaadmin" component={Admin}></Route> 
           </Switch>
         </div>
       </HashRouter>
