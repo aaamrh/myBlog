@@ -16,7 +16,8 @@ Router.get('/article_list/',  function(req, res){
       console.log(err)
     }
     return res.json({articles:doc})  
-  })
+  }).sort([['date',-1]])
+  // .limit(4) 查询多少个
 })
 
 
