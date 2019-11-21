@@ -11,6 +11,7 @@ class Nav extends Component {
         <Link className='nav del' to='#'>前端笔记</Link>
         <Link className='nav del' to='#'>后端笔记</Link>
         <Link className='nav del' to='#'>移动笔记</Link>
+        <Link className='nav del' to='#'>投资理财</Link>
         <Link className='nav del' to='#'>个人生活</Link>
         <Link className='nav' to='/navigation'>私藏的网站</Link>
       </div>

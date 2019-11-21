@@ -128,6 +128,7 @@ class PublishArticle extends Component {
               <label className='f-fl'>Js: <input type='checkbox' name='tag'  onChange={this.handleCheckBox} value='js' /></label> 
               <label className='f-fl'>感悟: <input type='checkbox' name='tag'  onChange={this.handleCheckBox} value='diary' /></label> 
               <label className='f-fl'>读书笔记: <input type='checkbox' name='tag'  onChange={this.handleCheckBox} value='book' /></label> 
+              <label className='f-fl'>投资理财: <input type='checkbox' name='tag'  onChange={this.handleCheckBox} value='financing' /></label> 
             </div>
           </div>
 

@@ -15,6 +15,7 @@ const models = {
     'tag':{type: Array, require: true},
     'breaf-intro' : {type:String}, 
     'date': {type: String},
+    'type': {type: String},
     'click': {type: Number}
   }
 }
