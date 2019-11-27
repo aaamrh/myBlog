@@ -12,4 +12,24 @@
     height: 45px;
     background: url(../../images/wechat-icon.png) no-repeat center/80%;
   }
+  .wechat:hover .qrcode{
+    display: block;
+  }
+
+  .qrcode{
+    position: absolute;
+    display: none;
+    bottom: 0;
+    left: -140px;
+    width: 140px;
+    background: #fff url(../../images/qrcode.jpg) no-repeat center 10px/100%;
+   }
+  .qrcode p{
+    font-size: 12px;
+    padding-top: 150px;
+    padding-bottom: 10px;
+    text-align: center;
+    line-height: 18px;
+    color: #737f99;
+  }
 }
